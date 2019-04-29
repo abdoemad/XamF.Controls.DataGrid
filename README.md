@@ -1,2 +1,1 @@
-# XamF.Controls.DataGrid
-Custom data-grid control for Xamarin Form
+# Custom DataGrid control for Xamarin Form
