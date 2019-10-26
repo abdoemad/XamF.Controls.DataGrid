@@ -25,3 +25,6 @@
         <Label Text="{Binding ProductList.Count, StringFormat='Products count: {0}'}" BackgroundColor="LightBlue"/>
     </controls:DataGrid.FooterPlaceHolder>
 </controls:DataGrid>
+```
+## Layout Design
+<img align="center" src="https://github.com/abdoemad/XamF.Controls.DataGrid/blob/master/layout-design.png"/>
