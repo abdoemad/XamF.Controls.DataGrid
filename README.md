@@ -1,7 +1,7 @@
 # Custom DataGrid control for Xamarin Form
 
 ## Result
-<img align="center" src="https://github.com/abdoemad/XamF.Controls.DataGrid/blob/master/demo-result.png" width="300" height="500" />
+<img align="center" src="https://github.com/abdoemad/XamF.Controls.DataGrid/blob/master/demo-result.png" width="400"/>
 
 ## Usage
 ```xml
@@ -25,3 +25,6 @@
         <Label Text="{Binding ProductList.Count, StringFormat='Products count: {0}'}" BackgroundColor="LightBlue"/>
     </controls:DataGrid.FooterPlaceHolder>
 </controls:DataGrid>
+```
+## Layout Design
+<img align="center" src="https://github.com/abdoemad/XamF.Controls.DataGrid/blob/master/layout-design.png"/>
