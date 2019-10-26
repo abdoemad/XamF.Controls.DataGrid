@@ -28,3 +28,6 @@
 ```
 ## Layout Design
 <img align="center" src="https://github.com/abdoemad/XamF.Controls.DataGrid/blob/master/layout-design.png"/>
+
+## Code Structure
+<img align="center" src="https://github.com/abdoemad/XamF.Controls.DataGrid/blob/master/code-structure.PNG"/>
