@@ -15,8 +15,6 @@
     </ContentView.Resources>
     <ContentView.Content>
         <!-- TODO: Add Empty Content template in case there is no rows-->
-        <!-- TODO: Color rows over a condition by passing logic with the datagrid not with each column -->
-        <!-- TODO: Add footer with binding visibility -->
         <!-- TODO: Add loader with binding visibility -->
         <Grid RowSpacing="0">
             <Grid.RowDefinitions>
