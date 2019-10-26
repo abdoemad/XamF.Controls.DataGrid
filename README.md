@@ -41,3 +41,5 @@ This code repository is introducing a datagrid control for Xamarin Forms communi
 - Add Empty Content template in case there is no rows
 - Add loader
 - Add alternative rows style
+- Add unit testing
+- Expose it as NuGet package
