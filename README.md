@@ -1,7 +1,7 @@
 # Custom DataGrid control for Xamarin Form
 
 ## Result
-
+![alt text](https://github.com/abdoemad/XamF.Controls.DataGrid/blob/master/demo-result.png)
 ## Usage
 ```xml
 <controls:DataGrid Grid.Row="1" ItemsSource="{Binding ProductList}" 
