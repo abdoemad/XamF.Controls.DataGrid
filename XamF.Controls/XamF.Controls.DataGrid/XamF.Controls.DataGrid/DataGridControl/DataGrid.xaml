@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converters="clr-namespace:XamF.Controls.DataGrid.Converters"
+             mc:Ignorable="d"
+             x:Name="dataGrid"
+             x:Class="XamF.Controls.DataGrid.DataGridControl.DataGrid">
+    <ContentView.Resources>
+        <!--TODO: not called, use it instead of the declared in the App.xaml-->
+        <ResourceDictionary>
+            <converters:OrderTypeToIconConverter x:Key="orderTypeToIconConverter"></converters:OrderTypeToIconConverter>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <!-- TODO: Add Empty Content template in case there is no rows-->
+        <!-- TODO: Color rows over a condition by passing logic with the datagrid not with each column -->
+        <!-- TODO: Add footer with binding visibility -->
+        <!-- TODO: Add loader with binding visibility -->
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid x:Name="headerContainer" Grid.Row="0" Margin="2" BackgroundColor="{Binding Source={x:Reference dataGrid}, Path=HeaderBackgroundColor}"></Grid>
+            <ListView
+                Grid.Row="1"
+                x:Name="listView"
+                Margin="2"
+                RefreshCommand="{Binding Source={x:Reference dataGrid}, Path=RefreshCommand, Mode=TwoWay}"
+                ItemsSource="{Binding Source={x:Reference dataGrid}, Path=ItemsSource, Mode=TwoWay}">
+            </ListView>
+            <ContentView Grid.Row="2" Content="{Binding Source={x:Reference dataGrid}, Path=FooterPlaceHolder}">
+            </ContentView>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

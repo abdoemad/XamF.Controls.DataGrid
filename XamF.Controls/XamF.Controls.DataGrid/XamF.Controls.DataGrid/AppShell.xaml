@@ -5,6 +5,7 @@
        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
        mc:Ignorable="d"
        xmlns:local="clr-namespace:XamF.Controls.DataGrid.Views"
+       xmlns:pages="clr-namespace:XamF.Controls.DataGrid.Pages"
        Title="XamF.Controls.DataGrid"
        x:Class="XamF.Controls.DataGrid.AppShell">
 
@@ -31,6 +32,9 @@
 
     <!-- Your Pages -->
     <TabBar>
+        <Tab Title="DG Demo" Icon="tab_feed.png" >
+            <ShellContent ContentTemplate="{DataTemplate pages:DataGridDemoPage}" />
+        </Tab>
         <Tab Title="Browse" Icon="tab_feed.png">
             <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
         </Tab>

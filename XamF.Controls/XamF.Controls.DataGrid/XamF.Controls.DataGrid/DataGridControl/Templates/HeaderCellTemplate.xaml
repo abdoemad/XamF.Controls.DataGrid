@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:extension="clr-namespace:XamF.Controls.DataGrid.UIExtension"
+             mc:Ignorable="d"
+             xmlns:resources="clr-namespace:XamF.Controls.DataGrid.Resources"
+             x:Class="XamF.Controls.DataGrid.DataGridControl.Templates.HeaderCellTemplate">
+    <ContentView.GestureRecognizers>
+        <TapGestureRecognizer Tapped="HeaderTapped" />
+    </ContentView.GestureRecognizers>
+    <ContentView.Content>
+        <StackLayout  Orientation="Horizontal" Spacing="0">
+            <Label x:Name="headerLabel" VerticalTextAlignment="Center" Margin="2" />
+            <!--Source="{extension:EmbeddedImage ResourceUri={x:Static resources:PathsResource.Sort_UpArrow}}"-->
+            <!---->
+            <!--<Image x:Name="sortImage" Aspect="AspectFit" WidthRequest="30" Source="{Binding Path=ColumnData.SortOrderType, Mode=OneWay, Converter={StaticResource orderTypeToIconConverter}}"/>-->
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

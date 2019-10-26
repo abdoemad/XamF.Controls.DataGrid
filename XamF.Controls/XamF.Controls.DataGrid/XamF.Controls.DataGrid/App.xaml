@@ -3,9 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converters="clr-namespace:XamF.Controls.DataGrid.Converters"
              mc:Ignorable="d"
              x:Class="XamF.Controls.DataGrid.App">
     <Application.Resources>
-        
+        <ResourceDictionary>
+            <!--TODO: define OrderTypeToIconConverter in the datagrid control-->
+            <converters:OrderTypeToIconConverter x:Key="orderTypeToIconConverter"></converters:OrderTypeToIconConverter>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
