@@ -1,7 +1,7 @@
 # Custom DataGrid control for Xamarin Form
 
 ## Result
-<img align="center" src="https://github.com/abdoemad/XamF.Controls.DataGrid/blob/master/demo-result.png" width="300"/>
+<img align="center" src="https://github.com/abdoemad/XamF.Controls.DataGrid/blob/master/demo-result.png" width="400"/>
 
 ## Usage
 ```xml
