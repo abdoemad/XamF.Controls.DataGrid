@@ -38,3 +38,6 @@ This code repository is introducing a datagrid control for Xamarin Forms communi
 - Add seraching capability 
 - Enhance sorting
 - Add bindable styles
+- Add Empty Content template in case there is no rows
+- Add loader
+- Add alternative rows style
