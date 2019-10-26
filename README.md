@@ -1,5 +1,5 @@
 # Custom DataGrid control for Xamarin Form
-This code repository is introducing a datagrid control for Xamarin Forms community. It is still under development. It comes with Sorting capability.
+This code repository is introducing a datagrid control for Xamarin Forms community. It comes with sorting capability. It is still under development.
 
 ## Result
 <img align="center" src="https://github.com/abdoemad/XamF.Controls.DataGrid/blob/master/demo-result.png" width="400"/>
