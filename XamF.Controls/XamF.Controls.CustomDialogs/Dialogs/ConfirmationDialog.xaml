@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<dialogBase:DialogBase
+    xmlns:dialogBase="clr-namespace:XamF.Controls.CustomDialogs.Base" 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamF.Controls.CustomDialogs.ConfirmationDialog">
+    <dialogBase:DialogBase.ActionsPlaceHolder>
+        <StackLayout Orientation="Horizontal" Grid.Row="1">
+            <Button x:Name="btnYes" Text="Yes" WidthRequest="80"></Button>
+            <Button x:Name="btnNo" Text="No" WidthRequest="80"></Button>
+        </StackLayout>
+    </dialogBase:DialogBase.ActionsPlaceHolder>
+</dialogBase:DialogBase>

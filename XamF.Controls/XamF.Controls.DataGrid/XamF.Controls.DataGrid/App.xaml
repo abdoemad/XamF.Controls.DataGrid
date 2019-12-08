@@ -7,6 +7,10 @@
              mc:Ignorable="d"
              x:Class="XamF.Controls.DataGrid.App">
     <Application.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="LightBlue">
+            </Setter>
+        </Style>
         <ResourceDictionary>
             <!--TODO: define OrderTypeToIconConverter in the datagrid control-->
             <converters:OrderTypeToIconConverter x:Key="orderTypeToIconConverter"></converters:OrderTypeToIconConverter>

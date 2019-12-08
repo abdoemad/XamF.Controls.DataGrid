@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<dialogBase:DialogBase
+    xmlns:dialogBase="clr-namespace:XamF.Controls.CustomDialogs.Base"
+    xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamF.Controls.CustomDialogs.OkDialog">
+    <dialogBase:DialogBase.ActionsPlaceHolder>
+        <Button x:Name="btnOk" Text="Ok" WidthRequest="80"></Button>
+    </dialogBase:DialogBase.ActionsPlaceHolder>
+</dialogBase:DialogBase>

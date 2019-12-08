@@ -4,7 +4,8 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
-
+using XamF.Controls.CustomDialogs.Services;
+using XamF.Controls.CustomDialogs.Services.Imp;
 using XamF.Controls.DataGrid.Models;
 using XamF.Controls.DataGrid.Views;
 
@@ -12,11 +13,13 @@ namespace XamF.Controls.DataGrid.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
+        IDialogService _dialogService;
         public ObservableCollection<Item> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
 
         public ItemsViewModel()
         {
+            _dialogService = new DialogService();
             Title = "Browse";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
@@ -25,7 +28,9 @@ namespace XamF.Controls.DataGrid.ViewModels
             {
                 var newItem = item as Item;
                 Items.Add(newItem);
-                await DataStore.AddItemAsync(newItem);
+                var added = await DataStore.AddItemAsync(newItem);
+                if (added)
+                    await _dialogService.ShowOkDialogAsync($"Item {newItem.Text} is added!");
             });
         }
 

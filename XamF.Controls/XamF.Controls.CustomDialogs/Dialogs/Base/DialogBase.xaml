@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="XamF.Controls.CustomDialogs.Base.DialogBase"
+        x:Name="dialogBasePage">
+    <ContentPage.Content>
+        <Frame WidthRequest="250" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" Padding="30" CornerRadius="0">
+            <Grid RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label x:Name="lblMessage" Grid.Row="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="StartAndExpand" FontSize="Medium"></Label>
+                <ContentView Grid.Row="1" Content="{Binding Source={x:Reference dialogBasePage}, Path=ActionsPlaceHolder}"  HorizontalOptions="Center" VerticalOptions="End">
+                </ContentView>
+            </Grid>
+        </Frame>
+    </ContentPage.Content>
+</popup:PopupPage>

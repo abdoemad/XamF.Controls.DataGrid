@@ -7,12 +7,15 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using XamF.Controls.CustomDialogs.Services;
+using XamF.Controls.CustomDialogs.Services.Imp;
 using XamF.Controls.DataGrid.ObservableModels;
 
 namespace XamF.Controls.DataGrid.ViewModels
 {
     public class DataGridDemoViewModel : BaseViewModel
     {
+        IDialogService _dialogService;
         private ObservableCollection<Product>  _productList;
         public ObservableCollection<Product> ProductList
         {
@@ -22,6 +25,7 @@ namespace XamF.Controls.DataGrid.ViewModels
 
         public DataGridDemoViewModel()
         {
+            _dialogService = new DialogService();
             PopulateProducts();
             OnPropertyChanged(nameof(ProductList));
         }
@@ -42,9 +46,13 @@ namespace XamF.Controls.DataGrid.ViewModels
         }));
 
         private ICommand _productSelectedCommand;
-        public ICommand SelectedProductCommand => _productSelectedCommand ?? (_productSelectedCommand = new Command((selectedProduct) =>
+        public ICommand SelectedProductCommand => _productSelectedCommand ?? (_productSelectedCommand = new Command<Product>(async (selectedProduct) =>
         {
+           var confirmed = await _dialogService.ShowConfirmationDialogAsync($"Are you sure you want to delete Item: {selectedProduct.Name} ?");
+           if (!confirmed)
+               return;
 
+           ProductList.Remove(selectedProduct);
         }));
         private List<Product> _cachedProducts;
         private ICommand _searchTextChangedCommand;
@@ -68,6 +76,11 @@ namespace XamF.Controls.DataGrid.ViewModels
         void PopulateProducts()
         {
             _cachedProducts = new List<Product>() {
+                new Product{
+                    Name="Wireless Headphone",
+                    Price=600,
+                    Stock=50
+                },
                 new Product{
                     Name ="Samsung TV",
                     Price=300,
